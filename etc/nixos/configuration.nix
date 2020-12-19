@@ -2,7 +2,13 @@
 
 {
 
-  imports = [ ];
+  imports = [
+    # ./hardware-configuration.nix
+    # Users
+    ./users.nix
+    # Window Manager
+    ./wm/xmonad.nix
+  ];
 
   system = {
 
@@ -39,31 +45,6 @@
 
     xserver = {
 
-      enable = true;
-
-      layout = "us";
-      libinput.enable = true;
-
-      windowManager.xmonad = {
-        enable = true;
-        enableContribAndExtras = true;
-      };
-
-    };
-
-    upower.enable = true;
-
-  };
-
-  systemd.services.upower.enable = true;
-
-  users.extraUsers = {
-    rister = {
-      createHome = true;
-      extraGroups = [ "wheel" ];
-      group = "users";
-      home = "/home/rister";
-      isNormalUser = true;
     };
 
   };

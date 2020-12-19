@@ -10,3 +10,4 @@
 - https://stelligent.com/2017/07/11/introduction-to-nixos/ 
 - https://qfpl.io/posts/installing-nixos/
 - https://functor.tokyo/blog/2018-02-16-setup-xmonad-on-nixos
+- https://gvolpe.com/blog/xmonad-polybar-nixos/

@@ -68,6 +68,8 @@
     which
     nix-repl
     dmenu
+    rofi
+    picom
   ];
 
 }

@@ -47,11 +47,11 @@
   users.extraUsers = {
     rister = {
       createHome = true;
-      extraGroups = ["wheel"]
-        group = "users";
+      extraGroups = [ "wheel" ];
+      group = "users";
       home = "/home/rister";
       isNormalUser = true;
-    }
+    };
 
   };
 

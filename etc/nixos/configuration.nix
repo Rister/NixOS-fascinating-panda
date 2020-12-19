@@ -15,13 +15,32 @@
 
   boot = {
 
+    loader = {
+
+    };
+
   };
 
   networking = {
+    domain = "";
+    hostName = "NIXBALL48";
+    wireless.enable = true;
+    useDHCP = true;
+    firewall = {
+
+    };
 
   };
 
   services = {
+
+    openssh.enable = true;
+    locate.enable = true;
+
+    xserver = {
+      enable = false;
+      layout = "us";
+    };
 
   };
 

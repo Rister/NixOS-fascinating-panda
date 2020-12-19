@@ -38,11 +38,24 @@
     locate.enable = true;
 
     xserver = {
-      enable = false;
+
+      enable = true;
+
       layout = "us";
+      libinput.enable = true;
+
+      windowManager.xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+      };
+
     };
 
+    upower.enable = true;
+
   };
+
+  systemd.services.upower.enable = true;
 
   users.extraUsers = {
     rister = {
@@ -73,6 +86,7 @@
     gcc
     which
     nix-repl
+    dmenu
   ];
 
 }

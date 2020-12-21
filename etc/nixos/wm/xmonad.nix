@@ -13,6 +13,7 @@
 
     xserver = {
       enable = true;
+      autorun = -false;
       startDbusSession = true;
       layout = "us";
 
@@ -30,6 +31,14 @@
 
       xkbOptions = "caps:ctrl_modifier";
     };
+  };
+
+  services.picom = {
+    enable = true;
+    fade = true;
+    inactiveOpacity = 0.9;
+    shadow = true;
+    fadeDelta = 4;
   };
 
   hardware.bluetooth.enable = true;

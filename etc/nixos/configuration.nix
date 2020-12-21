@@ -47,16 +47,17 @@
 
     };
 
+    emacs.enable = true;
+
   };
 
-  systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     wget
     curl
     bind
     sysstat
     htop
     tmux
-    emacs
     vim
     nmap
     git
@@ -70,6 +71,22 @@
     dmenu
     rofi
     picom
+    bash
+    zsh
+    (import ./emacs.nix { inherit pkgs; })
   ];
+
+  programs = {
+
+    zsh.ohMyZsh = {
+      enable = true;
+      plugins = [ "git" "python" "man" ];
+      theme = "agnoster";
+      customPkgs = [ pkgs.nix-zsh-completions ];
+    };
+
+    plotinus.enable = true;
+
+  };
 
 }

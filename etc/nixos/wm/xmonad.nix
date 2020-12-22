@@ -13,7 +13,7 @@
 
     xserver = {
       enable = true;
-      autorun = -false;
+      autorun = false;
       startDbusSession = true;
       layout = "us";
 

@@ -3,7 +3,7 @@
 {
 
   imports = [
-    # ./hardware-configuration.nix
+    ./hardware-configuration.nix
     # Users
     ./users.nix
     ./core.nix
@@ -23,6 +23,11 @@
   boot = {
 
     loader = {
+      grub = {
+        enable = true;
+        version = 2;
+        device = "/dev/sda";
+      };
 
     };
 
@@ -32,7 +37,11 @@
     domain = "";
     hostName = "NIXBALL48";
     wireless.enable = true;
-    useDHCP = true;
+
+    # The global useDHCP flag is deprecated use per-interface instead
+    useDHCP = false;
+    interfaces.enp0s3.useDHCP = true;
+
     firewall = {
 
     };
@@ -43,12 +52,6 @@
 
     openssh.enable = true;
     locate.enable = true;
-
-    xserver = {
-
-    };
-
-    emacs.enable = true;
 
   };
 
@@ -79,5 +82,7 @@
     plotinus.enable = true;
 
   };
+
+  system.stateVersion = "20.09";
 
 }

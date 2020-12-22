@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  users.extraUsers = {
+  users.users = {
     rister = {
       createHome = true;
       extraGroups = [ "wheel" ];

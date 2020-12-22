@@ -79,8 +79,6 @@
       customPkgs = [ pkgs.nix-zsh-completions ];
     };
 
-    plotinus.enable = true;
-
   };
 
   system.stateVersion = "20.09";

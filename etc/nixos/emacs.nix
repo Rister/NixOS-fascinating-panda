@@ -14,4 +14,4 @@ let
 in emacsWithPackages (epkgs:
   (with epkgs.melpaStablePackages; [ magit ])
   ++ (with epkgs.melpaPackages; [ doom-modeline nix-mode ])
-  ++ (with epkgs.elpaPackages; [ auctex ]) ++ [ pkgs.notmuch ])
+  ++ (with epkgs.elpaPackages; [ org ]) ++ [ pkgs.notmuch ])

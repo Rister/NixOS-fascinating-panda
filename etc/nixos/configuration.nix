@@ -6,6 +6,7 @@
     # ./hardware-configuration.nix
     # Users
     ./users.nix
+    ./core.nix
     # Window Manager
     ./wm/xmonad.nix
   ];
@@ -52,26 +53,16 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wget
-    curl
     bind
     sysstat
-    htop
-    tmux
-    vim
     nmap
-    git
     mplayer
     python
     gnupg
-    w3m
     gcc
-    which
-    nix-repl
     dmenu
     rofi
     picom
-    bash
     zsh
     (import ./emacs.nix { inherit pkgs; })
   ];
